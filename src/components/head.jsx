@@ -1,8 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-function Head() {
-  return <Helmet title="Gatsby-bootcamp" />
+function Head(props) {
+  return <Helmet title={props.title} />
 }
 
 export default Head

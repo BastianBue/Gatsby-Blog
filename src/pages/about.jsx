@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 function AboutPage() {
   return (
     <div>
-      <Layout>
+      <Layout title="About me">
         <h1>About</h1>
         <p>
           Hello I am Bastian Büld, a fullstack Web-Developer based in NRW

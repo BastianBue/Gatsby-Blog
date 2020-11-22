@@ -4,7 +4,7 @@ import Head from "../components/head.jsx"
 
 import headerStyles from "../styles/header.module.scss"
 
-function Header() {
+function Header(props) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <header className={headerStyles.header}>
-      <Head />
+      <Head title={props.title + " | Gatsby-Blog"} />
       <h1>
         <Link className={headerStyles.title} to="/">
           {data.site.siteMetadata.title}
@@ -25,6 +25,15 @@ function Header() {
       </h1>
       <nav>
         <ul className={headerStyles.navList}>
+          <li>
+            <Link
+              activeClassName={headerStyles.activeNavItem}
+              className={headerStyles.navItem}
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
           <li>
             <Link
               className={headerStyles.navItem}
@@ -43,15 +52,7 @@ function Header() {
               Blog
             </Link>
           </li>
-          <li>
-            <Link
-              activeClassName={headerStyles.activeNavItem}
-              className={headerStyles.navItem}
-              to="/"
-            >
-              Home
-            </Link>
-          </li>
+
           <li>
             <Link
               activeClassName={headerStyles.activeNavItem}

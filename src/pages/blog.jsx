@@ -21,7 +21,7 @@ function BlogPage() {
   const posts = data.allContentfulBlogPost.edges
 
   return (
-    <Layout>
+    <Layout title="Blogs Overview">
       <h1>Blog</h1>
       <ol className={blogStyles.posts}>
         {posts.map(post => {

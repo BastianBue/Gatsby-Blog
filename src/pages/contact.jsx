@@ -4,11 +4,14 @@ import Layout from "../components/layout.jsx"
 
 function ContactPage() {
   return (
-    <Layout>
-    <h1>hello</h1>
-    <h2>Contact me</h2>
-    <Link to="/about">more about me!</Link>
-    <a href="https://www.google.com">my Twitter</a>
+    <Layout title="Contact">
+      <h1>Contact me!</h1>
+      <Link to="https://bastianbueldpersonalsite.herokuapp.com/">
+        Check out my Website
+      </Link>
+      <a href="mailto:b.bueld@gmx.de">
+        <p>Email me!</p>
+      </a>
     </Layout>
   )
 }
